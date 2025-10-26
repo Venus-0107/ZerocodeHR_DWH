@@ -2,7 +2,7 @@
 
 DDL : creating bronze table
 script : this script creates the tables in the 'bronze' schema, dropping existing tables if they are already existing.
-creating two new tables bronze.emp_info for employee details and bronze.compensation_info for compensation details.
+creating two new tables bronze.emp_info for employee details, bronze.compensation_info for compensation details and bronze.dept_lookup from department details.
 */
 
 
@@ -15,7 +15,6 @@ First_Name nvarchar(50),
 Last_Name nvarchar(50),
 Department_Code_Raw nvarchar(50),
 Location_ID int
-
 );
 
 If object_id('bronze.compensation_info', 'U') is not null
@@ -25,4 +24,12 @@ Emp_ID int,
 Annual_Salary_Raw nvarchar(50),
 Bonus_Amount_Raw nvarchar(50),
 Review_Rating_Raw nvarchar(25)
+);
+
+If object_id('bronze.dept_lookup', 'U') is not null
+Drop table bronze.dept_lookup;
+create table bronze.dept_lookup(
+Emp_ID int,
+Dept_ID nvarchar(50),
+Dept_Name_Legacy nvarchar(50)
 );
