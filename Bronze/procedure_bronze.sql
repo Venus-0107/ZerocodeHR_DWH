@@ -4,6 +4,7 @@ stored procedur= loads bronze layer (source--->bronze)
 
 -Inserting the raw data from source Emp_info.csv ------> bronze.Emp_info table
 -Inserting the raw data from source Compensation_info.csv ------> bronze.Compensation_info table
+-Inserting the raw data from source dept_lookup.csv ------> bronze.dept_lookup table
 
 Usage example = exec bronze.load_bronze
 ===============================================================
@@ -44,6 +45,23 @@ with (
  FIELDTERMINATOR = ',',
  TABLOCK
 );
+
+set @end_time = getdate();
+print '>>load duration time: ' + cast(datediff(second,@start_time, @end_time) as nvarchar)
+print '-----------------------------------'
+
+set @start_time = getdate();
+print  '>> Truncating the table: bronze.dept_lookup';
+Truncate table bronze.dept_lookup;
+Print '>> Inserting data into : bronze.dept_lookup';
+bulk insert bronze.dept_lookup
+from 'C:\Users\leela\OneDrive\Desktop\ZerocodeHR\dept_lookup.csv'
+with (
+ FIRSTROW = 2,
+ FIELDTERMINATOR = ',',
+ TABLOCK
+);
+
 set @end_time = getdate();
 print '>>load duration time: ' + cast(datediff(second,@start_time, @end_time) as nvarchar)
 print '-----------------------------------'
