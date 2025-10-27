@@ -1,0 +1,11 @@
+Emp_ID,Dept_ID,Dept_Name_Legacy
+1001,HR-D,HumanResources - Div.
+1002,FIN-US,Finance - United States
+1003,ENG-DEV,Engineering - Development
+1004,ENG-QA,Engineering - Quality
+1005,SALES_WEST,Sales - Western Region
+1006,FIN-US,Finance - United States
+1007,HR-D,HumanResources - Div.
+1008,MISSING,(Error: Missing Dept ID)
+1009,ENG-DEV,Engineering - Development
+1010,SALES_WEST,Sales - Western Region

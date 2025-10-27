@@ -1,0 +1,11 @@
+Emp_ID,Hire_Date_Raw,First_Name,Last_Name,Department_Code_Raw,Location_ID
+1001,2023/11/15,John,Smith,HR-D,1
+1002,12-01-22,Jane,Doe,FIN-US,1
+1003,2024-03-20,Alex,Chan,ENG-DEV,2
+,2021/08/01,Maria,Garcia,ENG-QA,2
+1005,05-18-2023,David,Lee,SALES_WEST,3
+1006,2022/10/05,Sarah,Kim,FIN-US,1
+1007,03-10-24,Michael,Chen,HR-D,3
+1008,2020/01/01,Emily,Clark,UNKNOWN,4
+1009,06-25-23,Daniel,Wong,ENG-DEV,2
+1010,2024-07-30,Jessica,Brown,SALES_WEST,4
